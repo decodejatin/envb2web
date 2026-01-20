@@ -27,17 +27,17 @@ const siteConfig = {
     contactEmail: "" // Placeholder
 };
 
-const teamMembers = [
+const teamMembers = [{
+        name: "Jatin Jalandhra",
+        role: "CR & Lead Developer",
+        initials: "JJ"
+    },
     {
         name: "Pragati",
         role: "Group Admin",
         initials: "P"
     },
-    {
-        name: "Jatin Jalandhra",
-        role: "CR & Lead Developer",
-        initials: "JJ"
-    },
+    
     {
         name: "Aadarsh Singh",
         role: "Biodiversity Group Lead",

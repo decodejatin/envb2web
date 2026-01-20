@@ -19,9 +19,19 @@
     height: 100%;
     background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
     z-index: -1;
-    filter: brightness(0.7);
+    filter: brightness(0.5) contrast(1.1);
+    /* Darker for better text visibility */
     transform: scale(1.1);
     animation: slowZoom 20s infinite alternate;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 800px;
+    padding: 20px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    /* Strong shadow for readability */
 }
 
 @keyframes slowZoom {

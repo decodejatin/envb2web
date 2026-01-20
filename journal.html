@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Journal | EnvSci</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 180px 0 80px;
+            text-align: center;
+            background-color: var(--color-bg-paper);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">EnvSci <span style="color: var(--color-accent-terra)">B2</span></a>
+
+            <div class="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="biodiversity.html" class="nav-link">Biodiversity</a>
+                <a href="journal.html" class="nav-link active">Journal</a>
+                <a href="academic.html" class="nav-link">Academic</a>
+                <a href="news.html" class="nav-link">Insights</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container text-reveal-wrapper">
+            <h1 class="text-reveal">Field Work Journal</h1>
+            <p class="text-reveal delay-1">Expedition logs and site visit reports.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container" id="journal-container">
+            <!-- Content injected via JS -->
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; 2026 Environmental Science Batch.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (projectData.journal.length === 0) {
+                renderComingSoon('journal-container', 'Field Logs Pending');
+            }
+        });
+    </script>
+</body>
+
+</html>

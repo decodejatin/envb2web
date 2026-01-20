@@ -1,0 +1,107 @@
+/* HOME SPECIFIC STYLES */
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+    z-index: -1;
+    filter: brightness(0.7);
+    transform: scale(1.1);
+    animation: slowZoom 20s infinite alternate;
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-subtitle {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+    display: block;
+    color: var(--color-accent-gold);
+}
+
+.mission-section {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    position: relative;
+}
+
+.mission-text {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.preview-card {
+    background: white;
+    padding: var(--space-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s var(--ease-out-expo);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.preview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card-number {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.03);
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-weight: 700;
+}
+
+.preview-card h3 {
+    margin-bottom: var(--space-sm);
+    position: relative;
+}

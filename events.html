@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodiversity Archive | EnvSci</title>
+    <title>Upcoming Events | EnvSci</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/advanced.css">
     <style>
-        /* Internal Page Header */
         .page-header {
             padding: 180px 0 80px;
             text-align: center;
@@ -34,52 +33,44 @@
 
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="biodiversity.html" class="nav-link active">Biodiversity</a>
+                <a href="biodiversity.html" class="nav-link">Biodiversity</a>
                 <a href="journal.html" class="nav-link">Journal</a>
                 <a href="academic.html" class="nav-link">Academic</a>
                 <a href="news.html" class="nav-link">Insights</a>
-                <a href="events.html" class="nav-link">Events</a>
+                <a href="events.html" class="nav-link active">Events</a>
             </div>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container text-reveal-wrapper">
-            <h1 class="text-reveal">The Biodiversity Archive</h1>
-            <p class="text-reveal delay-1" style="max-width: 600px; margin: 20px auto;">
-                A catalog of the living species recorded within our campus ecosystem.
-            </p>
-            <div class="text-reveal delay-2"
-                style="margin-top: 20px; font-weight: 500; color: var(--color-accent-terra);">
-                Group Lead: Aadarsh Singh
-            </div>
+            <h1 class="text-reveal scramble-on-load">Upcoming Events</h1>
+            <p class="text-reveal delay-1">Seminars, Field Trips, and Eco-Drives.</p>
         </div>
     </header>
 
     <section class="section-padding">
-        <div class="container" id="archive-container">
-            <!-- Content will be injected by JS -->
+        <div class="container" id="events-container">
+            <!-- Content injected via JS -->
         </div>
     </section>
 
     <footer class="site-footer">
         <div class="container">
             <div class="copyright">
-                &copy; 2026 Environmental Science Batch.
+                &copy; developed by <a href="https://github.com/decodejatin">Jatin Jalandhra</a>
             </div>
         </div>
     </footer>
 
     <script src="js/data.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/scramble.js"></script>
+    <script src="js/hud.js"></script>
     <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('archive-container');
-            if (projectData.birds.length === 0) {
-                renderComingSoon('archive-container', 'Archive Compilation In Progress');
-            } else {
-                // Future Implementation of Grid
-            }
+            renderComingSoon('events-container', 'Events Calendar Loading');
         });
     </script>
 </body>
